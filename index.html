@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation Example</title>
+
+  <!-- Link to the external CSS for styling -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- React and ReactDOM for rendering components -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Babel for JSX support -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+  <!-- Root container where React renders the content -->
+  <div id="root"></div>
+
+  <!-- React Component Script -->
+  <script type="text/babel">
+    // Header component - displays the main title and a welcome message
+    function Header(props) {
+      return (
+        <div>
+          <h1>{props.title}</h1>
+          <p>{props.message}</p>
+        </div>
+      );
+    }
+
+    // TodoList component - renders a simple to-do list with checkboxes
+    function TodoList(props) {
+      return (
+        <div>
+          <div>
+            <input type="checkbox" id="item1" name="item1" />
+            <label htmlFor="item1">{props.todos.item1}</label>
+          </div>
+          <div>
+            <input type="checkbox" id="item2" name="item2" />
+            <label htmlFor="item2">{props.todos.item2}</label>
+          </div>
+          <div>
+            <input type="checkbox" id="item3" name="item3" />
+            <label htmlFor="item3">{props.todos.item3}</label>
+          </div>
+          <button>Uncheck All</button>
+        </div>
+      );
+    }
+
+    // Card component - displays an image, a title, subtitle, and content
+    function Card(props) {
+      return (
+        <div className="card">
+          <img src={props.image} alt="Card image" />
+          <div className="card-content">
+            <h2>{props.title}</h2>
+            <h3>{props.subtitle}</h3>
+            <p>{props.content}</p>
+          </div>
+        </div>
+      );
+    }
+
+    // Footer component - displays a message and a default copyright notice
+    function Footer(props) {
+      return (
+        <div>
+          <p>{props.message}</p>
+          <p>{props.defaultMessage}</p>
+        </div>
+      );
+    }
+
+    // Page component - brings everything together
+    function Page() {
+      return (
+        <div>
+          {/* Header with a title and message */}
+          <Header title="Welcome to My Website!" message="Thanks for visiting my site." />
+
+          {/* To-do list with some sample items */}
+          <TodoList todos={{ item1: "Milk", item2: "Eggs", item3: "Bread" }} />
+
+          {/* A card with an image, title, subtitle, and content */}
+          <Card
+            title="My Card Title"
+            subtitle="My Card Subtitle"
+            content="This is the content of my card."
+            image="./images/image.jpg"
+          />
+
+          {/* Footer with contact info and a copyright message */}
+          <Footer
+            message="Contact me at contact@mywebsite.com"
+            defaultMessage="Copyright © 2023 My Website. All rights reserved."
+          />
+        </div>
+      );
+    }
+
+    // Render the Page component into the root container
+    ReactDOM.render(<Page />, document.getElementById('root'));
+  </script>
+</body>
+</html>

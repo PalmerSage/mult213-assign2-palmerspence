@@ -1,0 +1,115 @@
+/* Reset everything – no random margins or padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Keeps padding inside the element's size */
+}
+
+/* Base styling for the body – let's make it clean and easy to read */
+body {
+    font-family: Arial, sans-serif; /* Classic, simple font */
+    background-color: #3ae8ff; /* A nice, fresh light blue background */
+    color: #333; /* Neutral gray text */
+    line-height: 1.6; /* Adds breathing room between lines */
+    padding: 20px; /* Give the whole page some space around it */
+}
+
+/* Main container styling – this is where all the content goes */
+#root {
+    max-width: 800px; /* Keeps it from being too wide */
+    margin: 0 auto; /* Center it on the page */
+    background: #ffffff; /* White background for contrast */
+    border-radius: 8px; /* Smooth corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a little depth */
+    padding: 20px; /* Add space inside the container */
+}
+
+/* Header styling – title vibes */
+h1 {
+    text-align: center; /* Center the title */
+    color: #007BFF; /* Bright and eye-catching blue */
+    font-size: 2rem; /* Big but not overwhelming */
+    margin-bottom: 10px; /* A bit of breathing room below */
+}
+
+/* Paragraph styling – keep it simple and readable */
+p {
+    text-align: center; /* Center-align all paragraphs */
+    font-size: 1rem; /* Standard size for easy reading */
+    color: #555; /* Softer gray for less emphasis */
+}
+
+/* Styling for checkboxes in the to-do list */
+input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label */
+}
+
+/* Button styling – make it look clickable */
+button {
+    display: block; /* Center it horizontally */
+    margin: 20px auto; /* Space above and below */
+    padding: 10px 20px; /* Bigger click area */
+    font-size: 1rem; /* Make text readable */
+    background-color: #007BFF; /* Bright blue background */
+    color: white; /* White text for contrast */
+    border: none; /* No ugly borders */
+    border-radius: 5px; /* Smooth corners */
+    cursor: pointer; /* Show it's clickable */
+}
+
+/* Hover effect for buttons – a slightly darker blue */
+button:hover {
+    background-color: #0056b3; /* Darker blue to show interaction */
+}
+
+/* Card title styling – clean and bold */
+h2 {
+    font-size: 1.5rem; /* Standout title */
+    color: #007BFF; /* Matches the theme */
+    margin-bottom: 10px; /* Space below */
+}
+
+/* Card subtitle styling – smaller but noticeable */
+h3 {
+    font-size: 1.2rem; /* A bit smaller than the title */
+    color: #0056b3; /* Darker shade for hierarchy */
+    margin-bottom: 10px; /* Space below */
+}
+
+/* The actual card – image + content wrapped in a border */
+.card {
+    text-align: center; /* Center-align everything inside */
+    margin: 20px auto; /* Center the card itself with spacing */
+    border: 2px solid #007BFF; /* A nice blue border */
+    border-radius: 12px; /* Rounded corners for a modern look */
+    overflow: hidden; /* Make sure nothing sticks out */
+    max-width: 600px; /* Keep the card from being too wide */
+    background-color: #ffffff; /* White background for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* A soft shadow for depth */
+}
+
+/* Card image styling – make it fit perfectly */
+.card img {
+    width: 100%; /* Image spans the full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* No extra gaps under the image */
+}
+
+/* Content section inside the card */
+.card-content {
+    padding: 20px; /* Add some breathing room around the text */
+}
+
+/* Paragraphs in the card – clean and standard */
+.card p {
+    font-size: 1rem; /* Normal size */
+    color: #555; /* Neutral gray for readability */
+}
+
+/* Footer – simple and unobtrusive */
+footer p {
+    text-align: center; /* Center-align all footer text */
+    font-size: 0.9rem; /* Slightly smaller than the main text */
+    color: #555; /* Muted gray for low emphasis */
+    margin-top: 20px; /* Space above the footer */
+}
